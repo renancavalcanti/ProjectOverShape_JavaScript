@@ -1,0 +1,535 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Overshape</title>
+				
+		<link rel = "stylesheet" type = "text/css" href = "./css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+		<link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+		<link rel="shortcut icon" href="./img/LOGO_SITE.png" type="image/x-icon" />
+		
+	</head>
+	
+	
+	<body class="body-store">
+			<div id="myModal" class="modal">
+
+			 	<div class="modal-content">
+					<span class="close">&times;</span>
+					<h3>You must do Login before!</h3>
+					<form class="form-login">
+					  <input type="text" id="username" placeholder="Username" name="username" required>
+					  <br>
+					  <input type="password" id="passworduser" placeholder="Password" name="psw" required>
+					  <br><br>
+					  <input type="button" value="login" id="submit-login">
+					</form>
+				</div>
+
+			</div>
+			
+			<div id="myModalPayment" class="modalPayment">
+
+			 	<div class="modalPayment-content">
+					<span class="closePayment">&times;</span>
+					<form class="form-payment">
+						<table id="tableGeneral">
+							
+							<tr>
+								<th>
+									<table>
+										<tr>
+											<th colspan="2">
+												 <h2> Credit Card Info.</h2>
+											</th>
+											
+										</tr>
+										<tr>
+											<th>
+													
+												<input type = "number"  class="" id = "cardNumber" name ="cardnumber" placeholder="*Card Number" required>
+												<img src="" id="imageCard">
+												<p id="cardnumberPara" class="validParagraph">Card Number Starts with 3,4 or 5 and must be contain 16 numbers.</p>
+											 </th>
+											
+										</tr>
+										<tr>
+											<th>
+												 <input  type = "number" class="" id="cvc" name ="cvc" placeholder="*CVC" required>
+												 <p id="cvcPara" class="validParagraph">CVC must be 3 characters.</p>
+											 </th>
+											
+										</tr>
+										
+										<tr>
+											<th>
+												 <input type = "text" name ="nameoncard" id="nameoncard" class="" placeholder="*Name on Card" required>
+												 <p id="nameoncardPara" class="validParagraph">Name Doesn't have numbers!.</p>
+											 </th>
+										</tr>
+										
+										<tr>
+											<th>
+												 <input type = "text" id ="expiration" name ="expiration" class="" placeholder="*Expiration MM/YY" required>
+												 <p id="expirationPara" class="validParagraph">Expiration must be MM/YY.</p>
+											 </th>
+										</tr>
+										<tr>
+											<th>
+												 <button type="reset" class="reset" value="Reset">Clear</button>
+												 
+											 </th>
+										</tr>
+										<tr>
+											<th id="purchaseresumeBox">
+												 <h3 >Purchase Resume<h3>
+												 <ul id="purchaseresume">
+													
+												 <ul>
+											 </th>
+										</tr>
+										
+										<tr>
+											<th>
+												 <button type="submit" id ="submitButton" class="submitButton" value="submit">Confirm</button>
+											 </th>
+										</tr>
+										
+									</table>
+								</th>
+								<th>
+									<table>
+											<tr>
+												<th colspan="2">
+													 <h2> Shipping Address</h2>
+												</th>
+												
+											</tr>
+											<tr>
+												<th>
+													 <input type = "text" name ="shipname" placeholder="*Name" required>
+												</th>
+												
+											</tr>
+											<tr>
+												<th>
+													 <input type = "text" name ="address" placeholder="*Address" required>
+													 
+												 </th>
+												
+											</tr>
+											<tr>
+												<th>
+													 <input type = "text" name ="address2" placeholder="Address Line 2">
+													 
+												 </th>
+												
+											</tr>
+											<tr>
+												<th>
+													 <input type = "text" name ="city" placeholder="*City" required>
+													 
+												 </th>
+												
+											</tr>
+											<tr>
+												<th>
+													 <input type = "text" name ="postacode" placeholder="*Postal Code" required>
+													 
+												 </th>
+												
+											</tr>
+											
+											<tr>
+												<th>
+													 <input type = "text" name ="province" placeholder="*Province" required>
+													 
+												 </th>
+											</tr>
+											<tr>
+												<th>
+													 <input type = "text" name ="country" placeholder="Country">
+												 </th>
+											</tr>
+											
+										</table>
+								</th>
+							</tr>
+						</table>
+						
+					</form>
+				</div>
+
+			</div>
+		
+			<div class = "section-home-store">
+				<div class="container">
+					<img src="./img/LOGO_SITE.png">
+						
+					<ul id="top-store">
+						
+						<li><a href="./index.html">Home</a></li>
+						&emsp;
+						<li><a href="#">Store</a></li>
+						&emsp;
+						<li><a href="./aboutus.html">About Us</a></li>
+						&emsp;
+						<li><a href="./contactus.html">Contact Us</a></li>
+						<li><label>CAD$</label><li>
+						<li><input type="button" name="pay" id="pay" value="0.00" class="pay"> <br><h2 id="welcomeuser"></h2></li>
+						<li ><input type="button" class="btnLogout" value="LogOut" id="btnLogout"></li> 
+						<br>
+						
+					</ul>
+			
+				</div>
+			</div>
+			
+			<div class="search">
+				
+				<input type="text" id="search" placeholder="Search a product...">
+			</div>
+			<br>
+			
+			<div class="wrapper-store" >
+				<div class="products-line">
+				
+					<div id="no-border">
+						<h1>Best Seller</h1>
+					</div>
+					
+					<div class="product"> 
+						<img src="./img/Regata Cinza Pug Frente.png" alt="Tank-Top" name="Product0" id="Product0">
+						<h4 id="desc0"> Muscle Shirt Pug</h4>
+						<table>
+							<tr>
+								<th>
+									<select name="qty0">
+									
+										<option value=""></option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+																	
+									</select>
+								<th>
+								
+								<th>
+									<h5 id="value0"> CAD$ 29.99 </h5>
+								</th>
+							<tr>
+						</table>
+						<input type="button" name="product-0" value="Add Cart" class="add-cart">
+					</div>
+					
+					<div class="product">
+						<img src="./img/Regata Azul Victory Frente.png" alt="Tank-Top" name="Product1" id="Product1">
+						<h4 id="desc1"> Muscle Shirt Victory Blue</h4>
+						<table>
+							<tr>
+								<th>
+									<select name="qty1">
+									
+										<option value=""></option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+																	
+									</select>
+								<th>
+								
+								<th>
+									<h5 id="value1"> CAD$ 29.99 </h5>
+								</th>
+							<tr>
+						</table>
+						<input type="button" name="product-1" value="Add Cart" class="add-cart">
+					</div>
+					
+					<div class="product"> 
+						<img src="./img/Regata Vermelha 99 Frente.png" alt="Tank-Top" name="Product2" id="Product2">
+						<h4 id="desc2"> Muscle Shirt 99 Red </h4>
+						<table>
+							<tr>
+								<th>
+									<select name="qty2">
+									
+										<option value=""></option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+																	
+									</select>
+								<th>
+								
+								<th>
+									<h5 id="value2"> CAD$ 29.99 </h5>
+								</th>
+							<tr>
+						</table>
+						<input type="button" name="product-2" value="Add Cart" class="add-cart">
+					</div>
+				
+								
+					<div class="product"> 
+						<img src="./img/Camisa Laranja Frente.png" alt="Tank-Top" name="Product3" id="Product3">
+						<h4 id="desc3"> T-Shirt Grey</h4>
+						<table>
+							<tr>
+								<th>
+									<select name="qty3">
+									
+										<option value=""></option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+																	
+									</select>
+								<th>
+								
+								<th>
+									<h5 id="value3"> CAD$ 24.99 </h5>
+								</th>
+							<tr>
+						</table>
+						<input type="button" name="product-3" value="Add Cart" class="add-cart">
+					</div>
+					
+					<div class="product"> 
+						<img src="./img/Regata Amarela Training Frente.jpg" alt="Tank-Top" name="Product4" id="Product4" >
+						<h4 id="desc4"> Muscle Shirt Training</h4>
+						<table>
+							<tr>
+								<th>
+									<select name="qty4">
+									
+										<option value=""></option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+																	
+									</select>
+								<th>
+								
+								<th>
+									<h5 id="value4"> CAD$ 22.99 </h5>
+								</th>
+							<tr>
+						</table>
+						<input type="button" name="product-4" value="Add Cart" class="add-cart">
+					</div>
+					
+					<div class="product">
+						<img src="./img/Regata Azul 99 Frente.png" alt="Tank-Top" name="Product5" id="Product5">
+						<h4 id="desc5"> Muscle Shirt 99 Blue</h4>
+						<table>
+							<tr>
+								<th>
+									<select name="qty5">
+									
+										<option value=""></option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+																	
+									</select>
+								<th>
+								
+								<th>
+									<h5 id="value5"> CAD$ 20.99 </h5>
+								</th>
+							<tr>
+						</table>
+						<input type="button" name="product-5" value="Add Cart" class="add-cart">
+					</div>
+					
+					<div class="product"> 
+						<img src="./img/Regata Vermelha Victory Frente.jpg" alt="Tank-Top" name="Product6" id="Product6">
+						<h4 id="desc6"> Muscle Shirt Victory Red</h4>
+						<table>
+							<tr>
+								<th>
+									<select name="qty6">
+									
+										<option value=""></option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+																	
+									</select>
+								<th>
+								
+								<th>
+									<h5 id="value6"> CAD$ 28.99 </h5>
+								</th>
+							<tr>
+						</table>
+						<input type="button" name="product-6" value="Add Cart" class="add-cart">
+					</div>
+				
+				
+				
+				
+					<div class="product"> 
+						<img src="./img/Basica Amarela 99 Frente.png" alt="Tank-Top" name="Product7" id="Product7">
+						<h4 id="desc7"> T-Shirt 99</h4>
+						<table>
+							<tr>
+								<th>
+									<select name="qty7">
+									
+										<option value=""></option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+																	
+									</select>
+								<th>
+								
+								<th>
+									<h5 id="value7"> CAD$ 20.99 </h5>
+								</th>
+							<tr>
+						</table>
+						<input type="button" name="product-7" value="Add Cart" class="add-cart">
+					</div>
+					
+					<div class="product"> 
+						<img src="./img/Regata Vermelha PUG Frente.png" alt="Tank-Top" name="Product8" id="Product8">
+						<h4 id="desc8"> Muscle Shirt Pug Red</h4>
+						<table>
+							<tr>
+								<th>
+									<select name="qty8">
+									
+										<option value=""></option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+																	
+									</select>
+								<th>
+								
+								<th>
+									<h5 id="value8"> CAD$ 31.99 </h5>
+								</th>
+							<tr>
+						</table>
+						<input type="button" name="product-8" value="Add Cart" class="add-cart">
+					</div>
+					
+					<div class="product">
+						<img src="./img/Regata Cinza Dead Frente.png" alt="Tank-Top" name="Product9" id="Product9">
+						<h4 id="desc9"> Muscle Shirt Dead</h4>
+						<table>
+							<tr>
+								<th>
+									<select name="qty9">
+									
+										<option value=""></option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+																	
+									</select>
+								<th>
+								
+								<th>
+									<h5 id="value9"> CAD$ 25.99 </h5>
+								</th>
+							<tr>
+						</table>
+						<input type="button" name="product-9" value="Add Cart" class="add-cart">
+					</div>
+					
+					<div class="product"> 
+						<img src="./img/Regata Amarela Victory Frente.png" alt="Tank-Top" name="Product10" id="Product10">
+						<h4 id="desc10"> Muscle Shirt Victory Yellow</h4>
+						<table>
+							<tr>
+								<th>
+									<select name="qty10">
+									
+										<option value=""></option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+																	
+									</select>
+								<th>
+								
+								<th>
+									<h5 id="value10"> CAD$ 19.99 </h5>
+								</th>
+							<tr>
+						</table>
+						<input type="button" name="product-10" value="Add Cart" class="add-cart">
+					</div>
+				
+				</div>
+				
+				
+			</div>
+		<table class="fix-me">
+			<tr>
+				<th>
+					<a class="icon-hover" href="https://www.facebook.com/" ><img class="icon" src="./img/facebook.ico"></a>
+				</th>
+			</tr>
+			<tr>
+				<th>
+					<a href="https://www.instagram.com/" ><img class="icon" src="./img/instagram.png"></a>
+				</th>
+			</tr>
+			<tr>
+				<th>
+					<a href="https://www.twitter.com/" ><img class="icon" src="./img/twitter.png"></a>
+				</th>
+			</tr>
+		</table>
+			
+	</body>
+	
+	<script type="text/javascript" src="./js/main.js">
+  
+
+  </script>
+	
+	
+	
+</html>
